@@ -1,6 +1,6 @@
 import { useState } from "react"
-import Input from "./Components/Input"
-import Todos from "./Components/Todos"
+import Input from "./components/Input.jsx"
+import Todos from "./components/Todos.jsx"
 import './App.css';
 
 const INITIAL_TODO = [
@@ -12,12 +12,12 @@ const INITIAL_TODO = [
 
 function App() {
   const [todos, setTodos] = useState(INITIAL_TODO)
-
+  
   return (
     <div>
       <h1>Todo App</h1>
       <Input setTodos={setTodos} />
-      <Todos todos={todos} />
+      <Todos todos={todos}/>
     </div>
   )
 }
